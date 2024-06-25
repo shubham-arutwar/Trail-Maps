@@ -1,11 +1,12 @@
 {
-    "destination": {
-      "latitude": 19.07595,
-      "longitude": 73.06195
-    },
-    "home": {
-      "latitude": 19.045369,
-      "longitude": 73.064944
-    }
+  "destination": {
+    "latitude": 19.07595,
+    "longitude": 73.06195,
+    "color": "blue"
+  },
+  "office": {
+    "latitude": 19.0855,
+    "longitude": 73.0548,
+    "color": "green"
   }
-  
+}
