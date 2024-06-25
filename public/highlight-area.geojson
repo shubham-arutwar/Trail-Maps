@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [73.061304, 19.043453],
+            [73.061648, 19.046496],
+            [73.06139, 19.04968],
+            [73.064609, 19.049437],
+            [73.063557, 19.042987]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Highlighted Area"
+      }
+    }
+  ]
+}
