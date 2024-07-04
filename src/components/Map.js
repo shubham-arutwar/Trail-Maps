@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { fetchAndAddMarkers } from './Coordinates';
+import { addPolygons } from './polygon';
 
 const Map = () => {
   const mapContainerRef = useRef(null);
@@ -11,18 +11,17 @@ const Map = () => {
 
     navigator.geolocation.getCurrentPosition(
       position => {
-        const { latitude, longitude } = position.coords;
+        //const { latitude, longitude } = position.coords;
 
         const map = new mapboxgl.Map({
           container: mapContainerRef.current,
           style: 'mapbox://styles/shubham-arutwar/clxublsj800up01pcfnb12wyb',
-          center: [longitude, latitude],
+          center: [73.06195, 19.07595], // Center map on user's location
           zoom: 12,
         });
 
         map.on('load', () => {
-          fetchAndAddMarkers(map);
-          geolocateControl.trigger();
+          addPolygons(map);
         });
 
         map.addControl(new mapboxgl.NavigationControl(), 'top-right');
@@ -42,7 +41,7 @@ const Map = () => {
     );
   }, []);
 
-  return <div ref={mapContainerRef} style={{ width: '100vw', height: '100vh' }} />;
+  return <div ref={mapContainerRef} className="map-container" />;
 };
 
 export default Map;
